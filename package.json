@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint src/",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
@@ -14,6 +16,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
     "jest": "^25.1.0",
     "supertest": "^4.0.2"
   }
