@@ -1,7 +1,16 @@
 const express = require("express");
 const app = express();
-app.use(express.json());
+
 const Customer = require("./models/customer.model");
+const cors = require("cors");
+
+const corsOptions = {
+  origin: [process.env.FRONTEND_LOCALHOST, process.env.EDITOR_HEROKU_URL],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+app.use(express.json());
 
 const findAll = async () => {
   const collectionOfCustomers = await Customer.find();
