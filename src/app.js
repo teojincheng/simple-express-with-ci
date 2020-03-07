@@ -33,7 +33,7 @@ app.get("/customers", async (req, res) => {
 });
 
 app.get("/pi", async (req, res) => {
-  res.status(200).send(PI);
+  res.status(200).json("PI is 3.14");
 });
 
 app.get("/", async (req, res) => {
