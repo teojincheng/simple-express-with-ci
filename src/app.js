@@ -25,10 +25,15 @@ const createCustomer = async customer => {
 
 const triangularNumberSequence = [1, 3, 6, 10, 15, 21, 28, 36, 45];
 const EXPONENT = 8;
+const PI = 3.14159265359;
 
 app.get("/customers", async (req, res) => {
   const collection = await findAll();
   res.status(200).send(collection);
+});
+
+app.get("/pi", async (req, res) => {
+  res.status(200).send(PI);
 });
 
 app.get("/", async (req, res) => {
